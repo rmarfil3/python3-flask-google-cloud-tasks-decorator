@@ -1,5 +1,5 @@
 # Google Cloud Tasks Decorator for Python 3 + Flask
-A decorator for Flask + Python 3 that allows a function to run in the background via Google Cloud Tasks.
+A decorator for Python 3 + Flask that allows a function to run in the background via Google Cloud Tasks.
 
 ## Sample
 ```python3
