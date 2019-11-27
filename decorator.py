@@ -1,3 +1,5 @@
+from flask_application_init import cloud_task_client, cloud_task_parent
+
 class PushQueue:
     def __init__(self, f):
         self.f = f
