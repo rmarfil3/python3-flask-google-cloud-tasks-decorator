@@ -11,9 +11,12 @@ def send_email(subject, to, html):
         mail.send(msg)
 
 
-# 1. Use function normally
+# 1. Run in the background
 send_email("Hello", "johndoe@example.com", "Hello, world!")
 
-# 2. Run in the background
+# 2. Use function normally
 send_email("Hello", "johndoe@example.com", "Hello, world!")
 ```
+
+## Note
+The code is set to make push queues only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly the line `if os.environ.get('GAE_ENV') == 'standard'`.
