@@ -1,6 +1,7 @@
 # Google Cloud Tasks Decorator for Python 3 + Flask
 A decorator for Python 3 + Flask that allows a function to run in the background via Google Cloud Tasks.
 
+
 ## Usage
 ```python3
 @decorator.push_queue
@@ -17,10 +18,17 @@ send_email.delay("Hello", "johndoe@example.com", "Hello, world!")
 send_email("Hello", "johndoe@example.com", "Hello, world!")
 ```
 
+
 ## Note
 The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
 
 If code is unmodified and ran outside Google AppEngine environment, `.delay()` will simply call the function directly.
+
+
+## Requirements
+```
+google-cloud-tasks==1.3.0
+```
 
 ## Set-up
 Add this to your Flask application's init file
