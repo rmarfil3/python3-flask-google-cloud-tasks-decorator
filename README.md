@@ -19,12 +19,6 @@ send_email("Hello", "johndoe@example.com", "Hello, world!")
 ```
 
 
-## Note
-The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
-
-If code is unmodified and ran outside Google AppEngine environment, `.delay()` will simply call the function directly.
-
-
 ## Requirements
 ```
 google-cloud-tasks==1.3.0
@@ -45,3 +39,9 @@ if os.environ.get('GAE_ENV') == 'standard':
     cloud_task_client = tasks_v2.CloudTasksClient()
     cloud_task_parent = cloud_task_client.queue_path(project, location, queue)
 ```
+
+
+## Note
+The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
+
+If code is unmodified and ran outside Google AppEngine environment, `.delay()` will simply call the function directly.
