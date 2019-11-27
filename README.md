@@ -19,6 +19,6 @@ send_email("Hello", "johndoe@example.com", "Hello, world!")
 ```
 
 ## Note
-The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly the line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
+The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
 
 If ran locally, it will simply call the function directly.
