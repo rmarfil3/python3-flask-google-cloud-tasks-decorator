@@ -11,8 +11,7 @@ class PushQueue:
 
     def __call__(self, *args, **kwargs):
         self.f(*args, **kwargs)
-
-    @csrf.exempt
+        
     def push_queue_handler(self):
         """The Flask handler that will receive the request made by Google Cloud Tasks"""
 
@@ -32,7 +31,7 @@ class PushQueue:
         Live: Creates a push queue in Google Cloud Tasks using the endpoint above
         Local: Does not do background task, just calls the function directly
         """
-        if app.config["IS_ON_GAE"]:
+        if os.environ.get('GAE_ENV') == 'standard':
             payload = {
                 "args": args,
                 "kwargs": kwargs
