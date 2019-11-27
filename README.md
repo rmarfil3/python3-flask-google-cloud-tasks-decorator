@@ -24,7 +24,7 @@ send_email("Hello", "johndoe@example.com", "Hello, world!")
 google-cloud-tasks==1.3.0
 ```
 
-## Set-up
+## Setup
 Add this to your Flask application's init file
 ```python3
 from google.cloud import tasks_v2
