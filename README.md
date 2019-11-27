@@ -1,4 +1,4 @@
-# Google Cloud Tasks Decorator for Google AppEngine Python 3 + Flask
+# Google Cloud Tasks Decorator for Python 3 + Flask
 A decorator for Flask + Python 3 that allows a function to run in the background via Google Cloud Tasks.
 
 ## Sample
