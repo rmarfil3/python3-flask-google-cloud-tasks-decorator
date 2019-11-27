@@ -21,3 +21,18 @@ send_email("Hello", "johndoe@example.com", "Hello, world!")
 The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
 
 If code is unmodified and ran outside Google AppEngine environment, `.delay()` will simply call the function directly.
+
+## Set-up
+```python3
+# Add this to your Flask application's init file
+
+project=os.environ.get('GOOGLE_CLOUD_PROJECT')  # my-appengine-project
+location=os.environ.get('CLOUD_TASK_LOCATION')  # us-central1
+queue=os.environ.get('CLOUD_TASK_QUEUE')  # default
+
+cloud_task_client = None
+cloud_task_parent = None
+if os.environ.get('GAE_ENV') == 'standard':
+    cloud_task_client = tasks_v2.CloudTasksClient()
+    cloud_task_parent = cloud_task_client.queue_path(project, location, queue)
+```
