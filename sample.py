@@ -6,3 +6,10 @@ def send_email(subject, to, html):
         msg = Message(subject, recipients=to)
         msg.html = html
         mail.send(msg)
+
+
+# 1. Use function normally
+send_email("Hello", "johndoe@example.com", "Hello, world!")
+
+# 2. Run in the background
+send_email("Hello", "johndoe@example.com", "Hello, world!")
