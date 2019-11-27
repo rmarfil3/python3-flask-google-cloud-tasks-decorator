@@ -8,8 +8,8 @@ def send_email(subject, to, html):
         mail.send(msg)
 
 
-# 1. Use function normally
-send_email("Hello", "johndoe@example.com", "Hello, world!")
+# 1. Run in the background
+send_email.delay("Hello", "johndoe@example.com", "Hello, world!")
 
-# 2. Run in the background
+# 2. Use function normally
 send_email("Hello", "johndoe@example.com", "Hello, world!")
