@@ -23,8 +23,9 @@ The code is set to run in the background only when deployed in Google AppEngine 
 If code is unmodified and ran outside Google AppEngine environment, `.delay()` will simply call the function directly.
 
 ## Set-up
+Add this to your Flask application's init file
 ```python3
-# Add this to your Flask application's init file
+from google.cloud import tasks_v2
 
 project=os.environ.get('GOOGLE_CLOUD_PROJECT')  # my-appengine-project
 location=os.environ.get('CLOUD_TASK_LOCATION')  # us-central1
