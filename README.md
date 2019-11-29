@@ -1,5 +1,5 @@
 # Google Cloud Tasks Decorator for Python 3 + Flask
-A decorator for Python 3 + Flask that allows a function to run in the background via Google Cloud Tasks.
+A decorator for Python 3 + Flask that allows a function to run in the background via [Google Cloud Tasks](https://cloud.google.com/tasks).
 
 
 ## Usage
@@ -19,9 +19,9 @@ send_email("Hello", "johndoe@example.com", "Hello, world!")
 ```
 
 
-## Requirements
+## Dependencies
 ```
-google-cloud-tasks==1.3.0
+[google-cloud-tasks](https://pypi.org/project/google-cloud-tasks)
 ```
 
 ## Setup
