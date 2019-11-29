@@ -20,7 +20,7 @@ send_email("Hello", "johndoe@example.com", "Hello, world!")
 
 
 ## Dependencies
-[google-cloud-tasks](https://pypi.org/project/google-cloud-tasks)
+- [google-cloud-tasks](https://pypi.org/project/google-cloud-tasks)
 
 ## Setup
 Add this to your Flask application's init file
