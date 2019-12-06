@@ -61,5 +61,4 @@ def push_queue(f):
     :type f: function
     :rtype: PushQueue
     """
-    push_queue_object = PushQueue(f)
-    return push_queue_object
+    return PushQueue(f)
