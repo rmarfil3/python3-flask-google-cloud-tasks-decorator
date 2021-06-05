@@ -40,6 +40,6 @@ if os.environ.get('GAE_ENV') == 'standard':
 
 
 ## Notes
-The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 34 `if os.environ.get('GAE_ENV') == 'standard'`.
+The code is set to run in the background only when deployed in Google AppEngine environment. Please see `delay()` function in `decorator.py`, particularly line 36 `if os.environ.get('GAE_ENV') == 'standard'`.
 
 If code is unmodified and ran outside Google AppEngine environment, `.delay()` will simply call the function directly.
